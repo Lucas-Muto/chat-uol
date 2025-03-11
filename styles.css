@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F3F3F3;
+}
+
+.container {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.messages-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Base style para todas as mensagens */
+.message {
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #FFFFFF;
+}
+
+/* Mensagens de status (entrada/saída) */
+.message.status {
+    background-color: #DCDCDC !important;
+}
+
+/* Mensagens privadas */
+.message.private_message {
+    background-color: #FFDEDE !important;
+}
+
+.message.message {
+    background-color: #FFFFFF;
+}
+
+.message .time {
+    color: #AAAAAA;
+}
+
+.message strong {
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.message-input {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.message-input input {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.sending-to {
+    font-size: 14px;
+    color: #505050;
+    margin-top: 5px;
+}
+
+.participants-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.participants-sidebar.hidden {
+    display: none;
+}
+
+.sidebar-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar-content {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.sidebar-content h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Adicionar margem extra para o segundo título */
+.sidebar-content h2:nth-child(3) {
+    margin-top: 40px; /* Aumenta o espaço entre as seções */
+}
+
+/* Lista de participantes */
+.participants-list {
+    margin-bottom: 25px; /* Adiciona margem abaixo da lista de participantes */
+}
+
+/* Participantes */
+.participant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.participant-info,
+.visibility-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.participant-info img,
+.visibility-info img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Checkbox de seleção */
+.check {
+    width: 15px;
+    height: 15px;
+    display: none;
+}
+
+.check.visible {
+    display: block;
+}
+
+/* Opções de visibilidade */
+.visibility-options {
+    margin-top: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.send-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.send-button:focus {
+    outline: none;
+}
+
+.send-button:active {
+    background: none;
+}
+
+.send-button img {
+    width: 26px;
+    height: 26px;
+}
+
+.send-button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.option.disabled:hover {
+    background-color: transparent;
+} 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate-Papo UOL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.svg" alt="Logo UOL">
+            <img src="assets/people.svg" alt="Participantes" class="participants-button">
+        </header>
+
+        <main class="messages-container">
+            <!-- As mensagens serão inseridas aqui dinamicamente -->
+        </main>
+
+        <footer>
+            <div class="message-input">
+                <input type="text" placeholder="Escreva aqui...">
+                <p class="sending-to">Enviando para Todos (Público)</p>
+            </div>
+            <button class="send-button">
+                <img src="assets/send.svg" alt="Enviar">
+            </button>
+        </footer>
+    </div>
+
+    <aside class="participants-sidebar hidden">
+        <div class="sidebar-overlay"></div>
+        <div class="sidebar-content">
+            <h2>Escolha um contato para enviar mensagem:</h2>
+            <div class="participants-list">
+                <!-- Lista de participantes será inserida aqui -->
+            </div>
+            <h2>Escolha a visibilidade:</h2>
+            <div class="visibility-options">
+                <div class="option" data-visibility="public">
+                    <span>Público</span>
+                    <img src="check.svg" alt="Selecionado" class="check">
+                </div>
+                <div class="option" data-visibility="private">
+                    <span>Reservadamente</span>
+                    <img src="check.svg" alt="Selecionado" class="check">
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
