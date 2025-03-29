@@ -1,5 +1,8 @@
 # Bate-Papo UOL
 
+## Deploy
+O projeto está disponível em: [Link do Deploy](https://chat-uol-7frg.vercel.app)
+
 Uma implementação moderna do clássico Bate-Papo UOL, desenvolvida com JavaScript puro. Este projeto é uma versão mobile-first que permite aos usuários trocar mensagens em tempo real, com suporte a mensagens públicas e privadas.
 
 ## 🎯 Funcionalidades
